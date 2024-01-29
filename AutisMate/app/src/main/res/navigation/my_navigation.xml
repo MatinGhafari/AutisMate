@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ir.dunijet.autismate.group2.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/group2_fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_navigation5"
+            app:destination="@id/navigation5" />
+        <action
+            android:id="@+id/action_homeFragment_to_addPackFragment"
+            app:destination="@id/addPackFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_subItemFragments"
+            app:destination="@id/subItemFragments" />
+    </fragment>
+    <navigation
+        android:id="@+id/navigation5"
+        app:startDestination="@id/welcomeFragment">
+        <fragment
+            android:id="@+id/welcomeFragment"
+            android:name="ir.dunijet.autismate.group1.fragment.WelcomeFragment"
+            android:label="WelcomeFragment"
+            tools:layout="@layout/group1_fragment_welcome_page">
+            <action
+                android:id="@+id/action_welcomeFragment_to_avatarSelectionFragment"
+                app:destination="@id/avatarSelectionFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/avatarSelectionFragment"
+            android:name="ir.dunijet.autismate.group1.fragment.AvatarSelectionFragment"
+            android:label="AvatarSelectionFragment"
+            tools:layout="@layout/group1_fragment_avatar_selection">
+            <action
+                android:id="@+id/action_avatarSelectionFragment_to_nameSelectionFragment"
+                app:destination="@id/nameSelectionFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/nameSelectionFragment"
+            android:name="ir.dunijet.autismate.group1.fragment.NameSelectionFragment"
+            android:label="NameSelectionFragment"
+            tools:layout="@layout/group1_fragment_name_selection">
+            <action
+                android:id="@+id/action_nameSelectionFragment_to_congratulationsFragment"
+                app:destination="@id/congratulationsFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/congratulationsFragment"
+            android:name="ir.dunijet.autismate.group1.fragment.CongratulationsFragment"
+            android:label="CongratulationsFragment"
+            tools:layout="@layout/group1_fragment_congratulations_username">
+            <action
+                android:id="@+id/action_congratulationsFragment_to_homeFragment"
+                app:destination="@id/homeFragment" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="ir.dunijet.autismate.group2.fragment.SearchFragment"
+        android:label="SearchFragment"
+        tools:layout="@layout/group2_fragment_search" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="ir.dunijet.autismate.group3.fragment.SettingsFragment"
+        android:label="SettingsFragment"
+        tools:layout="@layout/group3_fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_detailAddPackFragment"
+            app:destination="@id/detailAddPackFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+        <action
+            android:id="@+id/action_settingsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailAddPackFragment"
+        android:name="ir.dunijet.autismate.group3.fragment.DetailAddPackFragment"
+        android:label="DetailAddPackFragment"
+        tools:layout="@layout/group3_fragment_detail_add_pack">
+        <action
+            android:id="@+id/action_detailAddPackFragment_to_addPackFragment"
+            app:destination="@id/addPackFragment" />
+        <action
+            android:id="@+id/action_detailAddPackFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPackFragment"
+        android:name="ir.dunijet.autismate.group3.fragment.AddPackFragment"
+        android:label="AddPackFragment"
+        tools:layout="@layout/group3_fragment_add_pack" >
+        <action
+            android:id="@+id/action_addPackFragment_to_detailAddPackFragment"
+            app:destination="@id/detailAddPackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="ir.dunijet.autismate.group4.fragment.UserProfileFragment"
+        android:label="UserProfileFragment"
+        tools:layout="@layout/group4_fragment_user_profile" >
+        <action
+            android:id="@+id/action_userProfileFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="ir.dunijet.autismate.group4.fragment.FavoritesFragment"
+        android:label="FavoritesFragment"
+        tools:layout="@layout/group4_fragment_favorites" />
+    <fragment
+        android:id="@+id/subItemFragments"
+        tools:layout="@layout/group4_fragment_subitem"
+        android:name="ir.dunijet.autismate.group4.fragment.SubItemFragments"
+        android:label="SubItemFragments" >
+        <action
+            android:id="@+id/action_subItemFragments_to_detailItemHomeFragment"
+            app:destination="@id/detailItemHomeFragment" />
+        <action
+            android:id="@+id/action_subItemFragments_to_homeFragment2"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/group4_fragment_details_item_home"
+        android:id="@+id/detailItemHomeFragment"
+        android:name="ir.dunijet.autismate.group4.fragment.DetailItemHomeFragment"
+        android:label="DetailItemHomeFragment" >
+        <action
+            android:id="@+id/action_detailItemHomeFragment_to_subItemFragments2"
+            app:destination="@id/subItemFragments" />
+    </fragment>
+</navigation>
