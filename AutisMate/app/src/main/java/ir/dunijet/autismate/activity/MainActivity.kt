@@ -1,7 +1,8 @@
-package ir.dunijet.autismate
+package ir.dunijet.autismate.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import ir.dunijet.autismate.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
